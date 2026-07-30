@@ -24,13 +24,13 @@
 </nav>
 
 <!-- HERO — three-photo crossfade, full width -->
-<header class="hero">
-  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1537136102161-ea2262437412?auto=format&fit=crop&w=2400&q=80');"></div>
+<header class="hero" id="hero">
+  <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1537136102161-ea2262437412?auto=format&fit=crop&w=2400&q=80');"></div>
   <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2400&q=80');"></div>
   <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2400&q=80');"></div>
 
   <div class="hero-caption">
-    <div class="caption-item">
+    <div class="caption-item active">
       <p class="eyebrow on-dark">No. 014 &nbsp;·&nbsp; Independent advisory, est. 2011</p>
       <h1>Judgment, from higher ground.</h1>
       <p class="lede on-dark">Maxcellence is an independent strategy and risk practice built for the decisions that don't have an obvious answer. We help leadership teams see the terrain before they commit.</p>
@@ -51,7 +51,18 @@
     <a href="contact.html" class="btn on-dark">Start a conversation</a>
     <a href="services.html" class="btn on-dark">How we work</a>
   </div>
-  <div class="hero-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div class="hero-controls">
+    <div class="hero-dots">
+      <button type="button" class="active" aria-label="Show slide 1"></button>
+      <button type="button" aria-label="Show slide 2"></button>
+      <button type="button" aria-label="Show slide 3"></button>
+    </div>
+    <button type="button" class="hero-toggle" id="heroToggle" aria-label="Pause slideshow" aria-pressed="false">
+      <svg class="icon-pause" viewBox="0 0 16 16"><rect x="3" y="2" width="3.5" height="12"></rect><rect x="9.5" y="2" width="3.5" height="12"></rect></svg>
+      <svg class="icon-play" viewBox="0 0 16 16" style="display:none;"><polygon points="4,2 14,8 4,14"></polygon></svg>
+    </button>
+  </div>
 </header>
 
 <!-- STANCE -->
