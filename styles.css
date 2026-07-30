@@ -1,21 +1,25 @@
 /* ============================================================
    MAXCELLENCE — design system
-   Ink navy + brass on cool paper. Fraunces / IBM Plex Sans / Mono.
+   Deep charcoal + champagne gold on warm ivory, with a single
+   corporate-red accent reserved for primary CTAs and ticks.
+   Fraunces / IBM Plex Sans / Mono.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root{
-  --ink:        #101B2D;
-  --steel:      #24405F;
-  --paper:      #F3F4F0;
-  --paper-alt:  #E9EAE4;
-  --brass:      #A9863D;
-  --brass-dim:  #8C7238;
-  --slate:      #4A5568;
+  --ink:        #2A2723;  /* deep charcoal — text, logo, nav, dark sections */
+  --steel:      #443F37;  /* charcoal hover shade */
+  --paper:      #FAF6EC;  /* warm ivory background */
+  --paper-alt:  #F1E9D6;  /* deeper ivory for alt sections */
+  --brass:      #B4933E;  /* champagne gold — dividers, premium highlights */
+  --brass-dim:  #97792F;
+  --red:        #8C1F1F;  /* corporate red — single accent, primary CTA only */
+  --red-dim:    #6E1818;
+  --slate:      #5C574E;
   --white:      #FFFFFF;
-  --line:       #D7D8D2;
-  --line-dark:  rgba(243,244,240,0.18);
+  --line:       #E3D9C0;
+  --line-dark:  rgba(250,246,236,0.18);
 
   --display: 'Fraunces', serif;
   --body:    'IBM Plex Sans', sans-serif;
@@ -231,6 +235,10 @@ p{ margin: 0; }
 .btn.primary:hover{ background: var(--steel); border-color: var(--steel); }
 .btn.on-dark{ border-color: var(--line-dark); color: var(--paper); }
 .btn.on-dark:hover{ background: var(--paper); color: var(--ink); }
+.btn.cta-red{ background: var(--red); border-color: var(--red); color: var(--paper); }
+.btn.cta-red:hover{ background: var(--red-dim); border-color: var(--red-dim); }
+.btn.outline-on-dark{ border-color: rgba(250,246,236,0.55); color: var(--paper); background: transparent; }
+.btn.outline-on-dark:hover{ background: rgba(250,246,236,0.12); border-color: var(--paper); }
 
 /* ---------- sections ---------- */
 section{ padding: clamp(56px, 9vw, 108px) 0; }
@@ -433,4 +441,93 @@ section{ padding: clamp(56px, 9vw, 108px) 0; }
   .service-row, .service-row.reverse{ grid-template-columns: 1fr; }
   .service-row .service-photo, .service-row.reverse .service-photo{ order: 1; min-height: 260px; }
   .service-row .service-text, .service-row.reverse .service-text{ order: 2; padding: 40px var(--pad); }
+}
+
+/* ---------- trust strip: credentials bar below hero ---------- */
+.trust-strip{
+  background: var(--ink);
+  border-bottom: 1px solid var(--line-dark);
+}
+.trust-strip .wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+.trust-strip span{
+  font-family: var(--mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: rgba(250,246,236,0.82);
+  padding: 0 22px;
+  border-right: 1px solid var(--line-dark);
+  white-space: nowrap;
+}
+.trust-strip span:last-child{ border-right: none; }
+.trust-strip span:first-child{ padding-left: 0; }
+@media (max-width: 860px){
+  .trust-strip span{ padding: 0 14px; border-right: none; }
+}
+
+/* ---------- pillar cards (services overview) ---------- */
+.pillar-card{
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.pillar-card .pillar-num{
+  font-family: var(--mono);
+  font-size: 12.5px;
+  color: var(--brass-dim);
+  letter-spacing: 0.1em;
+}
+.pillar-card ul{ list-style: none; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.pillar-card li{ padding-left: 18px; position: relative; color: var(--slate); font-size: 14.5px; }
+.pillar-card li::before{ content: '—'; position: absolute; left: 0; color: var(--brass); }
+.pillar-card .pillar-outcome{
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--slate);
+}
+.pillar-card .pillar-outcome b{ color: var(--ink); font-weight: 600; }
+
+/* ---------- industry tiles ---------- */
+.industry-tile{
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+  padding: 32px 28px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.industry-tile:hover{ border-color: var(--brass); background: var(--white); }
+.industry-tile .tile-num{
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--brass-dim);
+  letter-spacing: 0.08em;
+}
+
+/* ---------- insight / article cards ---------- */
+.insight-card{
+  border-top: 1px solid var(--line);
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+  align-items: baseline;
+}
+.insight-card:last-child{ border-bottom: 1px solid var(--line); }
+.insight-card .insight-tag{
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--brass-dim);
+  letter-spacing: 0.06em;
+}
+@media (max-width: 640px){
+  .insight-card{ grid-template-columns: 1fr; gap: 8px; }
 }
