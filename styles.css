@@ -306,3 +306,126 @@ section{ padding: clamp(56px, 9vw, 108px) 0; }
 @media (max-width: 560px){
   .grid-4{ grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   HERO SLIDESHOW — full-width crossfading photos with per-slide
+   captions. Pure CSS animation, no JS dependency; each slide gets
+   an equal share of an 18s loop (3 slides x 6s visible).
+   ============================================================ */
+.hero{
+  position: relative;
+  height: 94vh;
+  min-height: 620px;
+  max-height: 960px;
+  overflow: hidden;
+  color: var(--paper);
+}
+.hero-slide{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: heroFade 18s infinite ease-in-out;
+}
+.hero-slide:nth-of-type(1){ animation-delay: 0s; }
+.hero-slide:nth-of-type(2){ animation-delay: 6s; }
+.hero-slide:nth-of-type(3){ animation-delay: 12s; }
+
+.hero::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16,27,45,0.32) 0%, rgba(16,27,45,0.38) 42%, rgba(16,27,45,0.90) 100%);
+  z-index: 1;
+}
+
+@keyframes heroFade{
+  0%   { opacity: 0; }
+  3%   { opacity: 1; }
+  30%  { opacity: 1; }
+  36%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.hero-caption{ position: absolute; inset: 0; z-index: 2; }
+.caption-item{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--pad);
+  padding-bottom: 136px;
+  opacity: 0;
+  animation: heroFade 18s infinite ease-in-out;
+}
+.caption-item:nth-of-type(1){ animation-delay: 0s; }
+.caption-item:nth-of-type(2){ animation-delay: 6s; }
+.caption-item:nth-of-type(3){ animation-delay: 12s; }
+.caption-item h1{ color: var(--paper); max-width: 17ch; }
+.caption-item .lede{ color: rgba(243,244,240,0.86); margin-top: 20px; max-width: 52ch; }
+
+.hero-cta{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  z-index: 3;
+  padding: var(--pad);
+  padding-top: 0;
+  padding-bottom: 56px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.hero-dots{
+  position: absolute;
+  right: var(--pad);
+  bottom: 58px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+}
+.hero-dots span{
+  width: 22px; height: 2px;
+  background: rgba(243,244,240,0.35);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .hero-slide, .caption-item{ animation: none !important; opacity: 0; }
+  .hero-slide:nth-of-type(1), .caption-item:nth-of-type(1){ opacity: 1; }
+}
+
+@media (max-width: 760px){
+  .hero{ height: 100vh; min-height: 580px; }
+  .caption-item{ padding-bottom: 158px; }
+  .hero-cta{ padding-bottom: 40px; }
+  .hero-dots{ display: none; }
+}
+
+/* ---------- service showcase: alternating photo + copy ---------- */
+.service-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+}
+.service-row:last-child{ border-bottom: 1px solid var(--line); }
+.service-row .service-photo{ position: relative; min-height: 380px; overflow: hidden; }
+.service-row .service-photo img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  position: absolute; inset: 0;
+}
+.service-row .service-text{
+  padding: 56px clamp(24px,5vw,64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-row.reverse .service-photo{ order: 2; }
+.service-row.reverse .service-text{ order: 1; }
+
+@media (max-width: 860px){
+  .service-row, .service-row.reverse{ grid-template-columns: 1fr; }
+  .service-row .service-photo, .service-row.reverse .service-photo{ order: 1; min-height: 260px; }
+  .service-row .service-text, .service-row.reverse .service-text{ order: 2; padding: 40px var(--pad); }
+}

@@ -23,19 +23,36 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<header>
-  <div class="wrap" style="padding-top:clamp(56px,9vw,96px); padding-bottom:clamp(48px,7vw,72px);">
-    <p class="eyebrow reveal">No. 014 &nbsp;·&nbsp; Independent advisory, est. 2011</p>
-    <h1 class="reveal" style="margin-top:18px; max-width:15ch;">Judgment, on the record.</h1>
-    <p class="lede reveal" style="margin-top:26px;">Maxcellence is a strategy and risk practice built around a simple constraint: we run a small number of engagements at once, and we run them ourselves — no bench of juniors, no handoffs. Twelve partners. One case load each.</p>
-    <div class="reveal" style="margin-top:36px; display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="contact.html" class="btn primary">Start a conversation</a>
-      <a href="services.html" class="btn">How we work</a>
+<!-- HERO — three-photo crossfade, full width -->
+<header class="hero">
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1537136102161-ea2262437412?auto=format&fit=crop&w=2400&q=80');"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2400&q=80');"></div>
+  <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2400&q=80');"></div>
+
+  <div class="hero-caption">
+    <div class="caption-item">
+      <p class="eyebrow on-dark">No. 014 &nbsp;·&nbsp; Independent advisory, est. 2011</p>
+      <h1>Judgment, from higher ground.</h1>
+      <p class="lede on-dark">Maxcellence is an independent strategy and risk practice built for the decisions that don't have an obvious answer. We help leadership teams see the terrain before they commit.</p>
+    </div>
+    <div class="caption-item">
+      <p class="eyebrow on-dark">The method</p>
+      <h1>Every recommendation, argued in the room.</h1>
+      <p class="lede on-dark">No decks handed off and forgotten. The partner who built the case defends it in person — and stays through the vote.</p>
+    </div>
+    <div class="caption-item">
+      <p class="eyebrow on-dark">The terms</p>
+      <h1>Six engagements a year. Every one, in writing.</h1>
+      <p class="lede on-dark">A fixed fee, a named partner, and a standing quarter of follow-through after the decision is made.</p>
     </div>
   </div>
+
+  <div class="hero-cta">
+    <a href="contact.html" class="btn on-dark">Start a conversation</a>
+    <a href="services.html" class="btn on-dark">How we work</a>
+  </div>
+  <div class="hero-dots" aria-hidden="true"><span></span><span></span><span></span></div>
 </header>
-<div class="ledger"></div>
 
 <!-- STANCE -->
 <section>
@@ -53,32 +70,48 @@
 
 <div class="ledger"></div>
 
-<!-- METHOD PREVIEW — numbering justified: this is a real sequential method -->
-<section class="section-alt">
-  <div class="wrap">
-    <div class="section-head reveal">
+<!-- SERVICES — photo + a few sentences, one per practice area -->
+<section style="padding-bottom:0;">
+  <div class="wrap" style="padding-bottom:56px;">
+    <div class="section-head reveal" style="margin-bottom:0;">
       <div>
-        <p class="eyebrow">The method</p>
-        <h2 style="margin-top:16px;">Four stages. Same order, every time.</h2>
+        <p class="eyebrow">What we do</p>
+        <h2 style="margin-top:16px;">Three practice areas. One standard.</h2>
       </div>
       <a href="services.html" class="btn">Full breakdown</a>
     </div>
-    <div class="grid-3" style="background:var(--line);">
-      <div class="reveal" style="background:var(--paper-alt); padding:36px;">
-        <p class="eyebrow">01 — Diagnose</p>
-        <h3 style="margin-top:14px;">Find the real constraint</h3>
-        <p style="margin-top:12px; color:var(--slate);">Two weeks inside the operation before we form a view. Most engagements are fixing the wrong problem well.</p>
-      </div>
-      <div class="reveal" style="background:var(--paper-alt); padding:36px;">
-        <p class="eyebrow">02 — Design</p>
-        <h3 style="margin-top:14px;">Build the narrow path</h3>
-        <p style="margin-top:12px; color:var(--slate);">One recommendation, stress-tested against the ways it fails, not three options with the hard call left to the client.</p>
-      </div>
-      <div class="reveal" style="background:var(--paper-alt); padding:36px;">
-        <p class="eyebrow">03 — Deliver</p>
-        <h3 style="margin-top:14px;">Sit with the decision</h3>
-        <p style="margin-top:12px; color:var(--slate);">We stay in the room through the board vote, the announcement, the first hard quarter after it.</p>
-      </div>
+  </div>
+
+  <div class="service-row reveal">
+    <div class="service-photo">
+      <img src="https://images.unsplash.com/photo-1637665599155-abfcf9fc3f78?auto=format&fit=crop&w=1600&q=80" alt="An empty, well-lit boardroom set for a strategy meeting" loading="lazy">
+    </div>
+    <div class="service-text">
+      <p class="eyebrow">Corporate strategy</p>
+      <h3 style="margin-top:14px; font-size:26px;">Ownership &amp; direction</h3>
+      <p style="margin-top:14px; color:var(--slate); max-width:48ch;">Portfolio and divestiture decisions, market entry and exit, capital allocation disputes between founders and boards — the work that ends with a single decisive move, not an ongoing initiative.</p>
+    </div>
+  </div>
+
+  <div class="service-row reverse reveal">
+    <div class="service-photo">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" alt="Glass office towers viewed from street level, looking up" loading="lazy">
+    </div>
+    <div class="service-text">
+      <p class="eyebrow">Risk &amp; resilience</p>
+      <h3 style="margin-top:14px; font-size:26px;">Exposure &amp; response</h3>
+      <p style="margin-top:14px; color:var(--slate); max-width:48ch;">Supply chain concentration, regulatory exposure, and the operating decisions boards make after a near-miss forces the question of what else could fail the same way.</p>
+    </div>
+  </div>
+
+  <div class="service-row reveal">
+    <div class="service-photo">
+      <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80" alt="A hand signing a document at a desk" loading="lazy">
+    </div>
+    <div class="service-text">
+      <p class="eyebrow">Governance</p>
+      <h3 style="margin-top:14px; font-size:26px;">Succession &amp; structure</h3>
+      <p style="margin-top:14px; color:var(--slate); max-width:48ch;">Founder transitions, board composition, and the succession plans that are easy to postpone until the year they can't be. We're often called in by the outgoing leader, not the incoming one.</p>
     </div>
   </div>
 </section>
