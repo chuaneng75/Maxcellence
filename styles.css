@@ -158,7 +158,7 @@ a{ color: inherit; }
   padding-left: clamp(20px, 3vw, 40px) !important;
 }
 .nav-login-link:hover{ color: var(--red) !important; }
-@media (max-width: 860px){
+@media (max-width: 1180px){
   .nav-login-link{ border-left: none; padding-left: 0 !important; }
 }
 .nav-cta{
@@ -186,25 +186,30 @@ a{ color: inherit; }
 }
 .nav-toggle span{ width: 18px; height: 1.5px; background: var(--ink); }
 
-@media (max-width: 860px){
+.nav-panel{ display: contents; }
+
+@media (max-width: 1180px){
   .nav-links, .nav-cta{ display: none; }
   .nav-toggle{ display: flex; }
-  .site-nav.open .nav-links{
+  .site-nav.open .nav-panel{
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 84px; left: 0; right: 0;
+    max-height: calc(100vh - 84px);
+    overflow-y: auto;
     background: var(--paper);
     border-bottom: 1px solid var(--line);
-    padding: 24px var(--pad) 8px;
+    padding: 24px var(--pad) 28px;
+    gap: 22px;
+  }
+  .site-nav.open .nav-links{
+    display: flex;
+    flex-direction: column;
     gap: 18px;
   }
   .site-nav.open .nav-cta{
     display: inline-flex;
-    margin: 0 var(--pad) 24px;
-    position: absolute;
-    top: calc(84px + 210px);
-    left: 0;
     justify-content: center;
   }
 }
@@ -317,10 +322,15 @@ section{ padding: clamp(56px, 9vw, 108px) 0; }
 .grid-2{ display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
 .grid-3{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); }
 .grid-4{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+@media (max-width: 1024px){
+  .grid-3{ grid-template-columns: repeat(2, 1fr); }
+}
 @media (max-width: 860px){
   .grid-2{ grid-template-columns: 1fr; }
-  .grid-3{ grid-template-columns: 1fr; }
   .grid-4{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px){
+  .grid-3{ grid-template-columns: 1fr; }
 }
 @media (max-width: 560px){
   .grid-4{ grid-template-columns: 1fr; }
@@ -454,7 +464,16 @@ section{ padding: clamp(56px, 9vw, 108px) 0; }
   .service-row .service-text, .service-row.reverse .service-text{ order: 2; padding: 40px var(--pad); }
 }
 
-/* ---------- trust strip: credentials bar below hero ---------- */
+/* ---------- method step rows (services page) ---------- */
+.method-step{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 32px;
+  padding: 32px 0;
+}
+@media (max-width: 640px){
+  .method-step{ grid-template-columns: 1fr; gap: 8px; padding: 24px 0; }
+}
 .trust-strip{
   background: var(--ink);
   border-bottom: 1px solid var(--line-dark);
