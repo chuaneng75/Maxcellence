@@ -16,8 +16,13 @@
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="services.html" class="active">Services</a></li>
-      <li><a href="industries.html">Industries</a></li>
+      <li class="has-dropdown">
+        <a href="services.html" class="active">Services</a>
+        <ul class="dropdown">
+          <li><a href="services.html" class="active">What We Do</a></li>
+          <li><a href="industries.html">Industries</a></li>
+        </ul>
+      </li>
       <li><a href="insights.html">Insights</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="https://customer.maxcellence.com.sg" target="_blank" rel="noopener" class="nav-login-link">Client Login ↗</a></li>
@@ -32,56 +37,43 @@
   <div class="wrap" style="padding-top:clamp(56px,9vw,96px); padding-bottom:clamp(48px,7vw,72px);">
     <p class="eyebrow reveal">Services</p>
     <h1 class="reveal" style="margin-top:18px; max-width:20ch;">Three pillars. One method underneath.</h1>
-    <p class="lede reveal" style="margin-top:26px;">Every engagement, regardless of pillar, moves through the same four stages in the same order. The consistency is deliberate — it's how the founder keeps every engagement to the same standard, whichever client she's working with.</p>
+    <p class="lede reveal" style="margin-top:26px;">Every engagement moves through the same four stages, whichever pillar it falls under — kept consistent because it's all led personally by the founder.</p>
   </div>
 </header>
 <div class="ledger"></div>
 
-<!-- METHOD DETAIL -->
+<!-- METHOD — compact -->
 <section>
   <div class="wrap">
-    <p class="eyebrow reveal">The MAXcellence Method, in full</p>
-    <div style="margin-top:40px; display:flex; flex-direction:column; gap:0;">
-
-      <div class="reveal method-step" style="border-top:1px solid var(--line);">
-        <p class="eyebrow" style="font-size:14px;">01 / Diagnose</p>
-        <div>
-          <h3>Understand the business, the numbers, the bottlenecks</h3>
-          <p style="margin-top:12px; color:var(--slate); max-width:60ch;">We sit with the business, not just the owner — the books, the operations, the reporting as it actually exists today. The goal is a clear diagnosis: where visibility is missing, where cost is leaking, and what's really constraining growth.</p>
-        </div>
+    <p class="eyebrow reveal">The MAXcellence Method</p>
+    <div class="grid-4" style="margin-top:32px;">
+      <div class="reveal">
+        <span class="eyebrow">01</span>
+        <h3 style="margin-top:12px; font-size:19px;">Diagnose</h3>
+        <p style="margin-top:10px; color:var(--slate); font-size:14.5px;">Understand the business, the numbers, the bottlenecks.</p>
       </div>
-
-      <div class="reveal method-step" style="border-top:1px solid var(--line);">
-        <p class="eyebrow" style="font-size:14px;">02 / Structure</p>
-        <div>
-          <h3>Build the reporting, SOPs, controls and automation</h3>
-          <p style="margin-top:12px; color:var(--slate); max-width:60ch;">The business model, chart of accounts, reporting pack, SOPs and internal controls the business will actually run on — practical, and sized to the business, not a template borrowed from a much larger company.</p>
-        </div>
+      <div class="reveal">
+        <span class="eyebrow">02</span>
+        <h3 style="margin-top:12px; font-size:19px;">Structure</h3>
+        <p style="margin-top:10px; color:var(--slate); font-size:14.5px;">Build the reporting, SOPs, controls and automation.</p>
       </div>
-
-      <div class="reveal method-step" style="border-top:1px solid var(--line);">
-        <p class="eyebrow" style="font-size:14px;">03 / Monitor</p>
-        <div>
-          <h3>Track cash flow, margins, KPIs and execution</h3>
-          <p style="margin-top:12px; color:var(--slate); max-width:60ch;">Mayple walks the owner through the numbers directly, in plain terms, on a regular cadence — not a report left in an inbox. Decisions get made in that conversation, not after it.</p>
-        </div>
+      <div class="reveal">
+        <span class="eyebrow">03</span>
+        <h3 style="margin-top:12px; font-size:19px;">Monitor</h3>
+        <p style="margin-top:10px; color:var(--slate); font-size:14.5px;">Track cash flow, margins, KPIs and execution.</p>
       </div>
-
-      <div class="reveal method-step" style="border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
-        <p class="eyebrow" style="font-size:14px;">04 / Scale</p>
-        <div>
-          <h3>Support expansion, restructuring, funding or overseas growth</h3>
-          <p style="margin-top:12px; color:var(--slate); max-width:60ch;">Once the foundation holds, MAXcellence supports the next stage directly — fundraising support, investor reporting, feasibility studies, or the operational groundwork for expanding into a new market such as Indonesia.</p>
-        </div>
+      <div class="reveal">
+        <span class="eyebrow">04</span>
+        <h3 style="margin-top:12px; font-size:19px;">Scale</h3>
+        <p style="margin-top:10px; color:var(--slate); font-size:14.5px;">Support expansion, restructuring, funding or overseas growth.</p>
       </div>
-
     </div>
   </div>
 </section>
 
 <div class="ledger"></div>
 
-<!-- PILLARS — full detail -->
+<!-- PILLARS — condensed cards -->
 <section class="section-alt">
   <div class="wrap">
     <div class="section-head reveal">
@@ -91,45 +83,51 @@
       </div>
     </div>
 
-    <!-- Pillar 1 -->
-    <div class="service-row reveal" style="background:var(--white); border:1px solid var(--line); margin-bottom:24px;">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1637665599155-abfcf9fc3f78?auto=format&fit=crop&w=1600&q=80" alt="An empty, well-lit meeting room set for a strategy session" loading="lazy">
+    <div class="grid-3" style="background:transparent; gap:24px;">
+      <div class="pillar-card reveal">
+        <div class="pillar-photo">
+          <img src="https://images.unsplash.com/photo-1637665599155-abfcf9fc3f78?auto=format&fit=crop&w=1200&q=80" alt="An empty, well-lit meeting room set for a strategy session" loading="lazy">
+        </div>
+        <div class="pillar-body">
+          <span class="pillar-num">01</span>
+          <h3 style="margin-top:12px;">Strategy &amp; Business Modelling</h3>
+          <ul>
+            <li>Business Diagnostic</li>
+            <li>Business Modelling</li>
+            <li>Restructuring</li>
+          </ul>
+          <p class="pillar-outcome"><b>Ideal for —</b> founders, investors, new ventures, expanding businesses.</p>
+        </div>
       </div>
-      <div class="service-text">
-        <p class="eyebrow">Pillar 01 — Strategy &amp; Business Modelling</p>
-        <h3 style="margin-top:14px; font-size:24px;">Business Diagnostic · Business Modelling · Restructuring</h3>
-        <p style="margin-top:14px; color:var(--slate);"><b style="color:var(--ink);">Problem —</b> the business is growing, or about to, but no one can say with confidence whether the model actually works, where it's profitable, or what it needs before it can raise capital or expand.</p>
-        <p style="margin-top:10px; color:var(--slate);"><b style="color:var(--ink);">Outcome —</b> a clear business model, profitability visibility, funding readiness and a practical growth roadmap.</p>
-        <p style="margin-top:10px; color:var(--slate); font-size:14px;"><b style="color:var(--ink);">Ideal for —</b> founders, investors, new ventures, expanding businesses.</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-photo">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Financial performance graphs and dashboards on a laptop screen" loading="lazy">
+        </div>
+        <div class="pillar-body">
+          <span class="pillar-num">02</span>
+          <h3 style="margin-top:12px;">Finance Transformation &amp; Reporting</h3>
+          <ul>
+            <li>Consolidated Financial Overview</li>
+            <li>Management Reporting (FP&amp;A)</li>
+            <li>Fractional CFO</li>
+          </ul>
+          <p class="pillar-outcome"><b>Timeline —</b> 2–4 weeks to stand up, then monthly.</p>
+        </div>
       </div>
-    </div>
-
-    <!-- Pillar 2 -->
-    <div class="service-row reverse reveal" style="background:var(--white); border:1px solid var(--line); margin-bottom:24px;">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" alt="Financial performance graphs and dashboards on a laptop screen" loading="lazy">
-      </div>
-      <div class="service-text">
-        <p class="eyebrow">Pillar 02 — Finance Transformation &amp; Reporting</p>
-        <h3 style="margin-top:14px; font-size:24px;">Consolidated Financial Overview · Management Reporting (FP&amp;A) · Fractional CFO</h3>
-        <p style="margin-top:14px; color:var(--slate);"><b style="color:var(--ink);">Problem —</b> the books close late, numbers across entities don't tie out cleanly, and there's no monthly rhythm for actually reading what the business is telling you.</p>
-        <p style="margin-top:10px; color:var(--slate);"><b style="color:var(--ink);">What you receive —</b> monthly P&amp;L, balance sheet and cash-flow review; budget vs actual analysis; a rolling 13-week cash-flow forecast; a KPI dashboard; a monthly management review; an action list for margin, cost and cash improvements.</p>
-        <p style="margin-top:10px; color:var(--slate); font-size:14px;"><b style="color:var(--ink);">Typical timeline —</b> 2–4 weeks to stand up, then ongoing on a monthly cadence.</p>
-      </div>
-    </div>
-
-    <!-- Pillar 3 -->
-    <div class="service-row reveal" style="background:var(--white); border:1px solid var(--line);">
-      <div class="service-photo">
-        <img src="https://images.unsplash.com/photo-1677506048148-0c914dd8197b?auto=format&fit=crop&w=1600&q=80" alt="Project planning on a whiteboard with sticky notes by column" loading="lazy">
-      </div>
-      <div class="service-text">
-        <p class="eyebrow">Pillar 03 — Process, Automation &amp; Control</p>
-        <h3 style="margin-top:14px; font-size:24px;">Simple Automation Tools · SOP Set-Up · Process Improvement</h3>
-        <p style="margin-top:14px; color:var(--slate);"><b style="color:var(--ink);">Problem —</b> month-end close takes too long, the same manual errors keep recurring, and it's unclear who owns what once the business grows past the founder doing everything.</p>
-        <p style="margin-top:10px; color:var(--slate);"><b style="color:var(--ink);">Outcome —</b> faster month-end close, fewer manual errors, clearer accountability and scalable operations.</p>
-        <p style="margin-top:10px; color:var(--slate); font-size:14px;"><b style="color:var(--ink);">Ideal for —</b> SMEs, villa owners, F&amp;B operators, property developers scaling past founder-only operations.</p>
+      <div class="pillar-card reveal">
+        <div class="pillar-photo">
+          <img src="https://images.unsplash.com/photo-1677506048148-0c914dd8197b?auto=format&fit=crop&w=1200&q=80" alt="Project planning on a whiteboard with sticky notes by column" loading="lazy">
+        </div>
+        <div class="pillar-body">
+          <span class="pillar-num">03</span>
+          <h3 style="margin-top:12px;">Process, Automation &amp; Control</h3>
+          <ul>
+            <li>Simple Automation Tools</li>
+            <li>SOP Set-Up</li>
+            <li>Process Improvement</li>
+          </ul>
+          <p class="pillar-outcome"><b>Ideal for —</b> businesses scaling past founder-only operations.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -137,26 +135,11 @@
 
 <div class="ledger"></div>
 
-<!-- SUPPORTING SERVICES -->
+<!-- SUPPORTING SERVICES — one line -->
 <section>
   <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <p class="eyebrow">Compliance &amp; capability</p>
-        <h2 style="margin-top:16px;">Supporting services.</h2>
-      </div>
-    </div>
-    <p class="lede reveal" style="margin-bottom:32px;">These reinforce implementation and build the client's own capability — not the main reason clients engage MAXcellence, but part of every engagement that needs them.</p>
-    <div class="grid-2">
-      <div class="reveal" style="background:var(--paper-alt); border:1px solid var(--line); padding:32px;">
-        <h3 style="font-size:19px;">Accounting &amp; Tax</h3>
-        <p style="margin-top:12px; color:var(--slate);">Statutory compliance, bookkeeping oversight and tax filing support that keeps the business's books audit-ready and its obligations current.</p>
-      </div>
-      <div class="reveal" style="background:var(--paper-alt); border:1px solid var(--line); padding:32px;">
-        <h3 style="font-size:19px;">Training &amp; Development</h3>
-        <p style="margin-top:12px; color:var(--slate);">Hands-on training for the owner's own finance team, so the reporting systems and controls MAXcellence builds keep running well after the engagement ends.</p>
-      </div>
-    </div>
+    <p class="eyebrow reveal">Also included where needed</p>
+    <p class="lede reveal" style="margin-top:14px;">Accounting &amp; Tax, and Training &amp; Development — supporting services that reinforce implementation, not the main reason clients engage MAXcellence.</p>
   </div>
 </section>
 
