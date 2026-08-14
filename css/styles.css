@@ -109,23 +109,13 @@ a{ color: inherit; }
   height: 84px;
 }
 .brand{
-  font-family: var(--display);
-  font-size: 21px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  text-decoration: none;
-  color: var(--ink);
   display: flex;
-  align-items: baseline;
-  gap: 9px;
+  align-items: center;
 }
-.brand .mark{
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--brass);
-  border: 1px solid var(--brass);
-  padding: 2px 6px;
-  letter-spacing: 0.05em;
+.brand-logo{
+  height: 30px;
+  width: auto;
+  display: block;
 }
 .nav-links{
   display: flex;
@@ -560,6 +550,29 @@ section{ padding: clamp(56px, 9vw, 108px) 0; }
   inset: 0;
   background-image: repeating-linear-gradient(135deg, var(--line-dark) 0, var(--line-dark) 1px, transparent 1px, transparent 16px);
 }
+.portrait-photo{
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.portrait-photo img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- profile grid — photo column sized to the photo, not 50/50 ---------- */
+.profile-grid{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (max-width: 640px){
+  .profile-grid{ grid-template-columns: 1fr; }
+  .profile-grid .portrait-photo{ max-width: 260px; }
+}
+
 .portrait-placeholder .initials{
   position: relative;
   font-family: var(--display);
