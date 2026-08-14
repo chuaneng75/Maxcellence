@@ -1,28 +1,28 @@
 /* ============================================================
    MAXCELLENCE — design system
-   Deep charcoal + champagne gold on warm ivory, with a single
+   Deep navy + steel-blue on cool platinum, with a single
    corporate-red accent reserved for primary CTAs and ticks.
-   Fraunces / IBM Plex Sans / Mono.
+   EB Garamond / Lato / IBM Plex Mono.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 :root{
-  --ink:        #2A2723;  /* deep charcoal — text, logo, nav, dark sections */
-  --steel:      #443F37;  /* charcoal hover shade */
-  --paper:      #FAF6EC;  /* warm ivory background */
-  --paper-alt:  #F1E9D6;  /* deeper ivory for alt sections */
-  --brass:      #B4933E;  /* champagne gold — dividers, premium highlights */
-  --brass-dim:  #97792F;
+  --ink:        #101B2D;  /* deep navy — text, logo, nav, dark sections */
+  --steel:      #1F3350;  /* navy hover shade */
+  --paper:      #F6F7FA;  /* cool platinum background */
+  --paper-alt:  #EBEEF3;  /* deeper platinum for alt sections */
+  --brass:      #6E8FBD;  /* steel-blue — on-dark text, dividers, premium highlights */
+  --brass-dim:  #2C4260;  /* deeper steel-blue — on-light text (eyebrows, labels) */
   --red:        #8C1F1F;  /* corporate red — single accent, primary CTA only */
   --red-dim:    #6E1818;
-  --slate:      #5C574E;
+  --slate:      #4B5568;
   --white:      #FFFFFF;
-  --line:       #E3D9C0;
-  --line-dark:  rgba(250,246,236,0.18);
+  --line:       #DDE2EA;
+  --line-dark:  rgba(246,247,250,0.14);
 
-  --display: 'Fraunces', serif;
-  --body:    'IBM Plex Sans', sans-serif;
+  --display: 'EB Garamond', serif;
+  --body:    'Lato', sans-serif;
   --mono:    'IBM Plex Mono', monospace;
 
   --max: 1180px;
@@ -151,57 +151,6 @@ a{ color: inherit; }
   background: var(--brass);
 }
 
-/* ---------- nav dropdown: groups related pages under one tab ---------- */
-.has-dropdown{ position: relative; }
-.has-dropdown > a::before{
-  content: '';
-  display: inline-block;
-  width: 5px; height: 5px;
-  margin-left: 6px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-2px) rotate(45deg);
-}
-.dropdown{
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 8px 0;
-  position: absolute;
-  top: 100%;
-  left: -18px;
-  min-width: 220px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  box-shadow: 0 12px 28px rgba(42,39,35,0.12);
-  z-index: 60;
-}
-.has-dropdown:hover .dropdown,
-.has-dropdown:focus-within .dropdown{ display: block; }
-.dropdown a{
-  display: block;
-  padding: 11px 18px;
-  font-size: 14px;
-  color: var(--slate);
-  text-decoration: none;
-  white-space: nowrap;
-}
-.dropdown a:hover, .dropdown a.active{ background: var(--paper-alt); color: var(--ink); }
-
-.nav-login-btn{
-  font-family: var(--mono);
-  font-size: 12.5px;
-  color: var(--ink);
-  text-decoration: none;
-  border: 1px solid var(--line);
-  padding: 8px 14px;
-  white-space: nowrap;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
-}
-.nav-login-btn:hover{ border-color: var(--red); color: var(--red); }
-@media (max-width: 1180px){
-  .nav-login-btn{ margin-left: auto; margin-right: 12px; padding: 7px 12px; }
-}
 .nav-cta{
   font-family: var(--mono);
   font-size: 13px;
@@ -253,17 +202,6 @@ a{ color: inherit; }
     display: inline-flex;
     justify-content: center;
   }
-  .has-dropdown > a::before{ display: none; }
-  .dropdown{
-    display: block;
-    position: static;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    padding: 10px 0 0 18px;
-    min-width: 0;
-  }
-  .dropdown a{ padding: 8px 0; font-size: 14px; }
 }
 
 /* ---------- headings / type scale ---------- */
@@ -305,8 +243,8 @@ p{ margin: 0; }
 .btn.on-dark:hover{ background: var(--paper); color: var(--ink); }
 .btn.cta-red{ background: var(--red); border-color: var(--red); color: var(--paper); }
 .btn.cta-red:hover{ background: var(--red-dim); border-color: var(--red-dim); }
-.btn.outline-on-dark{ border-color: rgba(250,246,236,0.55); color: var(--paper); background: transparent; }
-.btn.outline-on-dark:hover{ background: rgba(250,246,236,0.12); border-color: var(--paper); }
+.btn.outline-on-dark{ border-color: rgba(246,247,250,0.55); color: var(--paper); background: transparent; }
+.btn.outline-on-dark:hover{ background: rgba(246,247,250,0.12); border-color: var(--paper); }
 
 /* ---------- sections ---------- */
 section{ padding: clamp(56px, 9vw, 108px) 0; }
@@ -541,7 +479,7 @@ section{ padding: clamp(56px, 9vw, 108px) 0; }
   font-family: var(--mono);
   font-size: 12.5px;
   letter-spacing: 0.04em;
-  color: rgba(250,246,236,0.82);
+  color: rgba(246,247,250,0.82);
   padding: 0 22px;
   border-right: 1px solid var(--line-dark);
   white-space: nowrap;
@@ -603,6 +541,75 @@ section{ padding: clamp(56px, 9vw, 108px) 0; }
   font-size: 12px;
   color: var(--brass-dim);
   letter-spacing: 0.08em;
+}
+
+/* ---------- portrait placeholder — until a real photo is supplied ---------- */
+.portrait-placeholder{
+  aspect-ratio: 4/5;
+  background: var(--ink);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.portrait-placeholder::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(135deg, var(--line-dark) 0, var(--line-dark) 1px, transparent 1px, transparent 16px);
+}
+.portrait-placeholder .initials{
+  position: relative;
+  font-family: var(--display);
+  font-size: clamp(64px, 9vw, 104px);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--brass);
+}
+
+/* ---------- dash list — reusable "—" bulleted list ---------- */
+.dash-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.dash-list li{
+  padding-left: 20px;
+  position: relative;
+  color: var(--slate);
+  font-size: 15px;
+}
+.dash-list li::before{
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--brass);
+}
+.dash-list.accent-red li::before{ color: var(--red); }
+
+/* ---------- form fields (contact page) ---------- */
+.form-field{
+  font-family: var(--body);
+  font-size: 16px;
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--ink);
+}
+textarea.form-field{ resize: vertical; }
+select.form-field{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'%3E%3Cpath d='M1 3l4 4 4-4' fill='none' stroke='%234B5568' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
 }
 
 /* ---------- insight / article cards ---------- */
